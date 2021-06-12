@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import './App.css';
 
 const api = {
-  key: 'f26ce63abe589a6d49a4119d40a28d6f',
-  base: 'https://api.openweathermap.org/data/2.5/',
+  key: process.env.REACT_APP_API_KEY,
+  base: process.env.REACT_APP_API_BASE,
 }
 
 function App() {
@@ -89,10 +89,10 @@ function App() {
               </div>
             </div>
           ) : (
-              <div className="app_error">
-                Oops, not found!
-              </div>
-            )}
+            <div className="app_error">
+              Oops, not found!
+            </div>
+          )}
 
         </main>
       </div>
